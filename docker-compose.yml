@@ -16,6 +16,7 @@ services:
     build: ./fluentd
     volumes:
       - ./fluentd/conf:/fluentd/etc
+      - LOG/FILE/PATH:/var/logs/
     links:
       - "elasticsearch"
     ports:
